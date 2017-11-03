@@ -12,6 +12,7 @@ body {
 	border-radius: 15px;
 	box-shadow: 12px 15px 40px #bbbbbb;
 	width: 500px;
+	height: 688px;
 	background-color: $gray-normal;
 	.header {
 		text-align: center;
@@ -160,4 +161,11 @@ i.bullet {
 }
 #domain-available-js {
 	margin-right: 0;
+}
+.hide {
+	display: none;
+}
+#send a {
+	text-decoration: none;
+	color: white;
 }
