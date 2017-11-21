@@ -1,0 +1,60 @@
+.notice { color: $main-gray; }
+
+.head-form { display: flex; }
+
+.input-form {
+	border: none;
+	margin-bottom: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	select, input {
+		padding: 5px;
+		font-size: .9em;
+		outline: none;
+		color: $input-form;
+		font-weight: 400;
+		border: none;
+		border-radius: 0;
+		background-color: white;
+		border-bottom: 1px solid $input-form;
+		margin: 0;
+		&.address { width: 238px; }
+		&.input-full {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $input-form;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $input-form;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $input-form;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $input-form;
+}
+
+.terms {
+	display: block;
+	margin-top: 20px;
+	color: $main-gray;
+}
+
+.important-link {
+	color: $main-orange;
+	cursor: pointer;
+}
+
+form.customer-register { margin-top: 40px; }
+

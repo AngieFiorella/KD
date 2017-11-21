@@ -4,28 +4,28 @@
   	<meta charset="utf-8">
   	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  	<link rel="stylesheet" type="text/css" href="../styles/styles.css">
+  	<link rel="stylesheet" type="text/css" href="../../../styles/styles.css">
   </head>
   <body>
   	<div class="main-container">
   		<div class="modal">
   			<div class="header">
-  				<img src="../images/logo-yachay.png" class="logo">
+  				<img src="../../../images/logo-yachay.png" class="logo-modal">
   				<p class="headline">Hosti 100 + Dominio .pe</p>
   			</div>
   			<div class="modal-body">
   				<section>
-  					<span class="label done">añadido</span>
-  					<div>
-  						<div class="feature">
-  							<i class="fa fa-check-circle bullet done"></i>
+  					<span class="label done mt-0">añadido</span>
+  					<div class="mb-20">
+  						<div class="feature mb-10">
+  							<i class="fa fa-check-circle bullet done check-icon"></i>
   							<span class="subtitle uppercase">Hosti 100</span>
   							<span class="period">(1 año)</span>
   						</div>
-  						<p class="text">Con tu hosting podrás administrar hasta 50 cuentas de correo.</p>
+  						<p>Con tu hosting podrás administrar hasta 50 cuentas de correo.</p>
   					</div>
   				</section>
-  				<section>
+  				<section class="mb-20">
   					<span class="label pending">pendiente</span>
   					<div>
   						<div class="feature">
@@ -35,11 +35,11 @@
   						</div>
   						<div class="seeker">
   							<input type="text" name="" id="input-domain" placeholder="Buscar...">
-  							<select id="select-js">
-  								<option value="pe">pe</option>
-  								<option value="org">org</option>
-  								<option value="com">com</option>
-  								<option value="com.pe">com.pe</option>
+  							<select id="select-js" class="select-modal">
+  								<option value="pe" class="select-option-modal">.pe</option>
+  								<option value="org" class="select-option-modal">.org</option>
+  								<option value="com" class="select-option-modal">.com</option>
+  								<option value="com.pe" class="select-option-modal">.com.pe</option>
   							</select>
   							<button class="seeker-button">
   								<i class="fa fa-search icon"></i>
@@ -57,13 +57,13 @@
   						</div>
   					</div>
   				</section>
-  				<p class="text">* Esta es una promoción gratuita del primer año para los usuarios de Kit Digital.</p>
+  				<p>* Esta es una promoción gratuita del primer año para los usuarios de Kit Digital.</p>
   			</div>
-  			<div style="height: 100px; background-color: white; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;">
-  				<footer>
-  					<button id="send"><a href="../user_form/user-form.html">Continuar »</a></button>
+  			<!--div class="container-footer" style="height: 100px; background-color: white; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;"-->
+  				<footer class="footer-background">
+  					<a href="../user_form/user-form.html"><button id="send" class="main-button-modal">Continuar »</button></a>
   				</footer>
-  			</div>
+  			<!--/div-->
   		</div>
   	</div>
   	<script type="text/javascript">
@@ -91,10 +91,12 @@
   					fb.textContent = 'El dominio ' + this.value + ' no está disponible';
   					console.log(domains.length);
   					document.getElementById('available').className = '';
-  				}else{
-  					document.getElementById('available').className = 'show';
-  					fb.textContent = '';
-  					document.getElementById('domain-available-js').textContent = this.value+'.';
+  				} else{
+              if ( this.value !== null){
+                document.getElementById('available').className = 'show';
+                fb.textContent = '';
+                document.getElementById('domain-available-js').textContent = this.value+'.';
+              }
   				}
   			}
   		}
